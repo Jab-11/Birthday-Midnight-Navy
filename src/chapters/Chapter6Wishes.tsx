@@ -39,7 +39,8 @@ const getChapter6Progress = (mode: StorageMode): Chapter6Progress => {
 
     const openedOrder = Array.isArray(saved.openedOrder)
       ? [...new Set(saved.openedOrder)].filter(
-          (i): i is number => Number.isInteger(i) && i >= 0 && i < t.stars.length && explored[i] === true,
+          (i): i is number =>
+            Number.isInteger(i) && i >= 0 && i < t.stars.length && explored[i] === true,
         )
       : [];
 
