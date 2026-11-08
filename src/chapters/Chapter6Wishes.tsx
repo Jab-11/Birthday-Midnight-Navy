@@ -7,7 +7,7 @@ import { Starfield } from "@/components/Starfield";
 import copy from "@/content/copy.json";
 import { useExperience } from "@/experience/ExperienceContext";
 import { validateWish, WISH_MAX_LENGTH } from "@/lib/rules";
-import { read, write } from "@/lib/storage";
+import { read, write, type StorageMode } from "@/lib/storage";
 import c from "./common.module.css";
 import styles from "./Chapter6.module.css";
 
@@ -19,7 +19,7 @@ type Chapter6Progress = {
   showFinal: boolean;
 };
 
-const getChapter6Progress = (mode: string): Chapter6Progress => {
+const getChapter6Progress = (mode: StorageMode): Chapter6Progress => {
   const defaults: Chapter6Progress = {
     part: "form",
     explored: t.stars.map(() => false),
@@ -39,7 +39,7 @@ const getChapter6Progress = (mode: string): Chapter6Progress => {
 
     const openedOrder = Array.isArray(saved.openedOrder)
       ? [...new Set(saved.openedOrder)].filter(
-          (i): i is number => Number.isInteger(i) && i >= 0 && i < t.stars.length && explored[i],
+          (i): i is number => Number.isInteger(i) && i >= 0 && i < t.stars.length && explored[i] === true,
         )
       : [];
 
@@ -377,7 +377,7 @@ function Constellation({
       <div className={styles.panel} aria-live="polite">
         {openedOrder.map((i) => {
           const star = t.stars[i];
-
+          if (!star) return null;
           return (
             <div key={star.id} className={`${styles.wishCard} ${c.fadeIn}`}>
               <h2 className={styles.wishTheme}>{star.theme}</h2>

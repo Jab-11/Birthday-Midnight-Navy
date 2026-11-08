@@ -4,7 +4,8 @@
  */
 export type StorageMode = "her" | "dev";
 
-type Key = "furthest" | "wish" | "draft" | "muted" | "musicStarted" | "chapter4Seen";
+type Key =
+  "furthest" | "wish" | "draft" | "muted" | "musicStarted" | "chapter4Seen" | "chapter6Progress";
 
 function k(mode: StorageMode, key: Key) {
   return `storybook.${mode}.${key}`;

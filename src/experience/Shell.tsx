@@ -48,7 +48,7 @@ export function Shell() {
         ) : (
           <span />
         )}
-        <MusicControl buttonClassName={styles.iconButton} pillClassName={styles.pill} />
+        <MusicControl buttonClassName={styles.iconButton!} pillClassName={styles.pill!} />
       </header>
 
       <main key={`${runId}-${chapter}`} className={styles.scene}>
