@@ -1,0 +1,125 @@
+{
+  "_note": "Owner-editable copy. Anything in [BRACKETS] is a placeholder still to be supplied (PRD §12, D-01). Do not replace with invented memories or messages.",
+  "chapter1": {
+    "eyebrow": "Midnight Countdown",
+    "countdownLead": "Until the stars line up",
+    "name": "Aloo",
+    "revealText": "The stars have a reason to shine a little brighter today.\n It's your day!"
+  },
+  "chapter2": {
+    "eyebrow": "A Little Celebration for You",
+    "lineOne": "It's your day,",
+    "name": "Aloo.",
+    "lineTwo": "And I've made a little something for you.",
+    "begin": "Let's Begin"
+  },
+  "chapter3": {
+    "eyebrow": "A Little Birthday Treat",
+    "hint": "Take a deep breath and blow out the candles!",
+    "afterBlow": "Yay! Candles out, birthday magic unlocked! Now, there's something I want you to know... ❤️"
+  },
+  "chapter4": {
+    "eyebrow": "Why You're Special",
+    "hint": "Things I adore about you",
+    "cards": [
+      {
+        "id": "daily-happiness",
+        "title": "My Daily Dose of Happiness 🤗",
+        "message": "I don't usually talk much or share everything with people. But talking to you has become one of my favourite parts of the day. Sometimes, when a little time passes without us talking, something just feels missing. Thank you for being such a happy part of my everyday life."
+      },
+      {
+        "id": "caring",
+        "title": "Your Caring Heart ❤️",
+        "message": "I love how you look after me, even through the little things. Whether I'm unwell and you insist that I take my medicines, or you remind me not to skip the gym, you never forget to check on me, even when we're just on a video call. And it's not just me; I see the same care in the way you look after your parents and friends. It's simply a part of who you are"
+      },
+      {
+        "id": "sweetness",
+        "title": "The Sweetness in You 😘",
+        "message": "I always feel special because of the way you talk to me. There's something so sweet and gentle about the way you speak. It's one of those little things about you that I genuinely adore."
+      },
+      {
+        "id": "open-up",
+        "title": "You Make Me Open Up 🫂",
+        "message": "I'm not someone who easily opens up or shares what's on my mind. But with you, I've slowly found myself talking about things I would usually keep to myself. I don't feel the need to hold everything in or pretend to be someone I'm not. I'm really grateful that I can be this comfortable with you."
+      },
+      {
+        "id": "accepted",
+        "title": "You Accept Me as I Am 🥹",
+        "message": "You've accepted me with all my flaws, even the parts of myself that I sometimes struggle to understand or accept. You make me feel that I don't have to be perfect or pretend to be someone else around you. That means more to me than I can properly express."
+      },
+      {
+        "id": "determination",
+        "title": "Your Strength 💪",
+        "message": "I admire how you keep working towards the things you want, even when the journey gets difficult or doesn't go as planned. You may not always realise how strong and determined you are, but I hope you never forget that there's so much in you to be proud of."
+      }
+    ]
+  },
+  "chapter5": {
+    "eyebrow": "Our Memories",
+    "videosTitle": "Moments Worth Replaying",
+    "videosHint": "Little moments we've shared, each one worth keeping close.\nSome memories deserve to be relived."
+  },
+  "chapter6": {
+    "eyebrow": "A Universe of Wishes",
+    "promptOne": "A new year, a new chapter, endless possibilities...",
+    "promptTwo": "If this year could bring you anything at all, what would your heart wish for?",
+    "fieldPlaceholder": "This year, I wish for...",
+    "submit": "Submit",
+    "openStars": "Discover Your Stars",
+    "sentText": "Your wish is now among the stars. May this year bring you closer to it. ✨",
+    "failedText": "Oops! Your wish couldn't reach the stars just yet. Let's try again.",
+    "starsHint": "Five little stars, each carrying a special wish for you.",
+    "stars": [
+      {
+        "id": "dreams",
+        "theme": "Your Dreams & Career 🌟",
+        "message": "May this year bring you closer to becoming the doctor you dream of being. I hope the right opportunities find you, your hard work pays off, and you find a place where you can learn and grow. Never doubt how far you've already come."
+      },
+      {
+        "id": "confidence",
+        "theme": "Believe in Yourself ✨",
+        "message": "I wish you could see yourself the way I see you. May you trust your abilities, feel confident in your decisions and be kinder to yourself. You don't have to have everything figured out to be doing well."
+      },
+      {
+        "id": "happiness",
+        "theme": "Everyday Happiness ☀️",
+        "message": "May your days bring more laughter, spontaneous plans, favourite food and little surprises. You deserve countless reasons to smile, even on the most ordinary days."
+      },
+      {
+        "id": "wellbeing",
+        "theme": "Health & Peace 🤍",
+        "message": "May you always have good health, peaceful days and time for yourself. I hope you never forget to rest, take care of yourself and let others care for you too."
+      },
+      {
+        "id": "together",
+        "theme": "More Memories Together 🫶",
+        "message": "May we get more chances to meet, explore new places, try new things and make little memories together. There's still so much I'd love to experience with you."
+      }
+    ],
+    "finalMessage": "More than anything, I wish this year gives you countless reasons to feel proud, happy and loved. And I hope I get to be part of many of those beautiful moments. ❤️"
+  },
+  "chapter7": {
+    "eyebrow": "A Little Something From My Heart",
+    "invite": "There's a little letter waiting for you. Open it ❤️",
+    "salutation": "Dear Aloo,",
+    "body": [
+      "Happy Birthday!",
+      "Mane khabar nathi ke kya thi start karu. Maybe ghani badhi vastu repeat thase, ke je badhu hu already aagal kahi chukyo hoish. But still, there are a few things I wanted to say to you.",
+      "Atyare 8 Nov time 6:08 PM che, and by now tamne mari gift mali gayi che. I'm really happy ke tamne thoda set gamya. And sorry pan, ke quality etli sari nathi jetli me vichari hati. I genuinely wanted to make it special for you, and I hope next time I don't make such mistakes.",
+      "I know chella ghana time thi things haven't been very easy for you. With everything happening around you, I know it can get overwhelming sometimes. I just want to be that consistent part of your life, koi pan situation hoy, good days ke difficult days. Badhu dhime dhime sort thai jashe. Bass Believe in Him, Remember Joshua 1:9 — be strong and courageous, because He is always with you.",
+      "You have become that corner of my life je mane kyarey lagyu pan nahotu ke mari life ma hase. A place I never knew I needed, but now I'm so glad I have. And aaje apne sathe 333 days thai gaya. Honestly, it's a little surprising how quickly time has passed.",
+      "I don't really believe much in numerology, but 333 being an angel number does fascinate me. And then there's Jeremiah 33:3, which talks about calling upon Him and His promises. Maybe we're also one of those promises He had planned for our lives, for each other. I don't know, maybe it's just a beautiful coincidence. Bau moti moti vaato nathi karvi, but I just find this thought special.",
+      "I just want ke tamne je pan joie che, desire karo che, and je best hoy, e badhu tamne male. I hope you get everything you've been working for and everything your heart wishes for. And most importantly, always be happy. Romans 15:13 — may God fill your heart with joy, peace and hope.",
+      "Thank you for choosing me and believing in me. Thank you for accepting me, for being there, and for making space for me in your life. It genuinely means a lot to me.",
+      "I don't know what else to say, Aloo. Bas etlu j ke I wish you all the happiness in the world, and I hope life brings you so many beautiful moments ahead.",
+      "Have a happy, happy birthday, babes! ❤️❤️❤️❤️"
+    ],
+    "signoff": "With lots of love,\nYours Truly Jjjj 🐣🐣🐣"
+  },
+  "chapter8": {
+    "eyebrow": "Until Our Next Little Adventure",
+    "finalMessage": "I hope this little birthday universe made you smile, Aloo. Once again Happy Birthday, babes! ❤️",
+    "gifAlt": "A dreamy birthday celebration with floating golden stars, glowing hearts, sparkling lights and a magical midnight sky",
+    "restart": "Experience It Again"
+  }
+}

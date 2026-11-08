@@ -1,0 +1,123 @@
+.dawn {
+  background: var(--gradient-dawn);
+  justify-content: center;
+}
+
+.stars {
+  height: 60%;
+}
+
+.glow {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  width: 140vmax;
+  height: 70vmax;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--champagne) 45%, transparent),
+    transparent 70%
+  );
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.clouds {
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 22vh;
+  min-height: 120px;
+  z-index: 1;
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+.content {
+  margin-top: clamp(1.5rem, 10vh, 6rem);
+  gap: 1.4rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.lineOne {
+  font-size: clamp(1.7rem, 7vw, 2.8rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne);
+  animation: inkIn 1.2s var(--ease-story) 0.2s both;
+}
+
+.name {
+  font-size: clamp(4.2rem, 22vw, 8.5rem);
+  font-weight: 600;
+  font-variation-settings:
+    "SOFT" 100,
+    "WONK" 1,
+    "opsz" 144;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  background: linear-gradient(180deg, var(--ivory) 30%, var(--champagne) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 24px color-mix(in oklab, var(--gold) 35%, transparent));
+  animation: rise 1.4s var(--ease-story) 0.6s both;
+}
+
+.lineTwo {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 4.6vw, 1.45rem);
+  font-weight: 400;
+  color: var(--ivory);
+  max-width: 22ch;
+  animation: inkIn 1.2s var(--ease-story) 1.2s both;
+}
+
+.flourish {
+  width: 160px;
+  animation: inkIn 1s var(--ease-story) 1.6s both;
+}
+
+.begin {
+  animation: inkIn 1s var(--ease-story) 2s both;
+}
+
+@keyframes inkIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateX(-2%);
+  }
+  to {
+    transform: translateX(2%);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

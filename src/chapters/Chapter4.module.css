@@ -1,0 +1,279 @@
+.table {
+  background: var(--gradient-paper);
+  color: var(--ink);
+}
+
+.table::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain);
+  pointer-events: none;
+}
+
+.heading {
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+/* Masonry: CSS columns, two on phones, three on wide screens. */
+.masonry {
+  list-style: none;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  width: 100%;
+  columns: 2;
+  column-gap: 14px;
+}
+
+@media (max-width: 340px) {
+  .masonry {
+    columns: 1;
+  }
+}
+
+@media (min-width: 900px) {
+  .masonry {
+    columns: 3;
+    column-gap: 26px;
+  }
+}
+
+.item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  perspective: 1200px;
+  transform: rotate(var(--tilt));
+}
+
+@media (min-width: 900px) {
+  .item {
+    margin-bottom: 28px;
+  }
+}
+
+/* Fixed heights per card: flipping never changes the layout. */
+.h1 {
+  height: 15rem;
+}
+.h2 {
+  height: 11.5rem;
+}
+.h3 {
+  height: 13.5rem;
+}
+.h4 {
+  height: 16rem;
+}
+.h5 {
+  height: 12rem;
+}
+.h6 {
+  height: 14rem;
+}
+
+@media (min-width: 640px) {
+  .h1 {
+    height: 18rem;
+  }
+  .h2 {
+    height: 14rem;
+  }
+  .h3 {
+    height: 16rem;
+  }
+  .h4 {
+    height: 19rem;
+  }
+  .h5 {
+    height: 14.5rem;
+  }
+  .h6 {
+    height: 17rem;
+  }
+}
+
+.card {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 800ms var(--ease-story);
+  border-radius: var(--radius-sm);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 0.9rem;
+  border-radius: var(--radius-sm);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow-paper);
+  color: var(--navy);
+  overflow: hidden;
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.9;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Deckled edge feel */
+.front {
+  gap: 0.6rem;
+  clip-path: polygon(
+    0 1%,
+    4% 0,
+    30% 0.6%,
+    62% 0,
+    100% 0.8%,
+    99.4% 40%,
+    100% 72%,
+    99% 100%,
+    60% 99.3%,
+    24% 100%,
+    0.6% 99.2%,
+    0 60%
+  );
+}
+
+.ivory {
+  background: var(--ivory);
+}
+.champagne {
+  background: color-mix(in oklab, var(--champagne) 70%, var(--ivory));
+}
+.blue {
+  background: color-mix(in oklab, var(--dusty-blue) 55%, var(--ivory));
+}
+
+.back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  text-align: left;
+  align-items: stretch;
+  gap: 0.4rem;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 1.55rem,
+      color-mix(in oklab, var(--dusty-blue) 45%, transparent) 1.55rem calc(1.55rem + 1px)
+    ),
+    var(--ivory);
+  background-position: 0 2.2rem;
+  border-left: 3px double color-mix(in oklab, var(--gold) 60%, transparent);
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-hand);
+  font-size: clamp(1.55rem, 6.4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.backTitle {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+.message {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-hand);
+  font-size: clamp(1.25rem, 4.8vw, 1.5rem);
+  line-height: 1.55rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.doodle {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  color: var(--gold-deep);
+}
+
+.flower {
+  position: absolute;
+  right: 6px;
+  bottom: -4px;
+  width: 30px;
+  opacity: 0.8;
+  transform: rotate(-14deg);
+}
+
+.seen {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.tape {
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  width: 64px;
+  height: 22px;
+  background: color-mix(in oklab, var(--champagne) 55%, transparent);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--navy) 15%, transparent);
+  clip-path: polygon(4% 0, 96% 6%, 100% 50%, 95% 100%, 3% 94%, 0 50%);
+}
+
+.tapeLeft {
+  left: 10px;
+  transform: rotate(-8deg);
+}
+.tapeCenter {
+  left: calc(50% - 32px);
+  transform: rotate(2deg);
+}
+.tapeRight {
+  right: 10px;
+  transform: rotate(7deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

@@ -1,0 +1,725 @@
+.cinema {
+  background: radial-gradient(
+    120% 70% at 50% 30%,
+    var(--navy-soft),
+    var(--navy) 55%,
+    var(--navy-deep)
+  );
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    closest-side,
+    transparent 60%,
+    color-mix(in oklab, var(--navy-deep) 70%, transparent)
+  );
+  pointer-events: none;
+}
+
+.photoArea {
+  --stage-h: min(72vh, 680px);
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.swipe {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  touch-action: pan-y;
+  user-select: none;
+  /* Fixed (not min) height so the controls below never shift between photos. */
+  height: var(--stage-h);
+}
+
+.figure {
+  margin: 0;
+  position: relative;
+  /* Sized from the photo's own ratio so portrait and landscape both show whole, uncropped. */
+  --max-w: 520px;
+  width: min(100%, var(--max-w), calc((var(--stage-h) - 11rem) * var(--ratio, 0.75) + 36px));
+  transform: rotate(var(--tilt));
+  animation: develop 750ms var(--ease-story) both;
+}
+
+/* Landscape photos earn a wider frame. */
+.landscape {
+  --max-w: 780px;
+}
+
+.fromRight {
+  --from-x: 36px;
+}
+
+.fromLeft {
+  --from-x: -36px;
+}
+
+.photo,
+.photoPlaceholder {
+  display: block;
+  width: 100%;
+  /* The <img height> attribute is huge; without this, max-height wins and every photo is forced
+     to the same tall box and cropped. Let the inline aspect-ratio size it instead. */
+  height: auto;
+  /* Leave room inside the fixed stage for the frame padding and caption. */
+  max-height: calc(var(--stage-h) - 11rem);
+  object-fit: cover;
+  background: var(--navy-soft);
+}
+
+.photoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--champagne);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      color-mix(in oklab, var(--dusty-blue) 10%, transparent) 0 10px,
+      transparent 10px 20px
+    ),
+    var(--navy-soft);
+}
+
+/* Frame styles vary through the sequence */
+.polaroid {
+  background: var(--ivory);
+  padding: 12px 12px 18px;
+  box-shadow: var(--shadow-lift);
+}
+
+/* In normal flow so the white strip grows to fit the date + caption instead of overlapping the photo. */
+.polaroid .caption {
+  position: static;
+  margin-top: 0.9rem;
+  color: var(--navy);
+  background: none;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  line-height: 1.35;
+  padding: 0 0.4rem;
+}
+
+.film {
+  padding: 26px 8px;
+  background:
+    radial-gradient(circle at 50% 50%, var(--navy-deep) 3px, transparent 3.5px) 0 6px / 18px 14px
+      repeat-x,
+    radial-gradient(circle at 50% 50%, var(--navy-deep) 3px, transparent 3.5px) 0 calc(100% - 6px) /
+      18px 14px repeat-x,
+    var(--champagne);
+  box-shadow: var(--shadow-lift);
+}
+
+.matte {
+  padding: 18px;
+  background: color-mix(in oklab, var(--navy-deep) 70%, var(--gold));
+  box-shadow:
+    0 0 0 1px var(--gold) inset,
+    var(--shadow-lift);
+}
+
+.caption {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--navy-deep) 82%, transparent);
+  color: var(--ivory);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.02rem;
+  text-align: left;
+}
+
+.film .caption {
+  color: var(--navy);
+  background: color-mix(in oklab, var(--ivory) 80%, transparent);
+}
+
+.date {
+  display: block;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 0.2rem;
+}
+
+.film .date,
+.polaroid .date {
+  color: var(--gold-deep);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.actions,
+.gridBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.75rem;
+}
+
+.actions .textLink,
+.gridBar .textLink {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.textLink:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.gridIcon {
+  flex: none;
+}
+
+/* The current photo whooshes up and away, then the grid takes over. */
+.whooshOut {
+  animation: whoosh 520ms cubic-bezier(0.55, 0, 0.85, 0.35) both;
+  pointer-events: none;
+}
+
+.leaving .controls,
+.leaving .actions,
+.leaving .arrowSide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms;
+}
+
+@keyframes whoosh {
+  from {
+    opacity: 1;
+    filter: none;
+    transform: rotate(var(--tilt, 0deg));
+  }
+  to {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate(-45%, -38%) rotate(-16deg) scale(0.35);
+  }
+}
+
+/* ---------- All photos: masonry grid ---------- */
+
+.gridArea {
+  width: 100%;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.masonry {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 12px;
+}
+
+.masonryItem {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  animation: tileIn 560ms var(--ease-story) both;
+  animation-delay: calc(var(--i, 0) * 50ms + 80ms);
+}
+
+.tile {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+  background: var(--ivory);
+  border-radius: 3px;
+  box-shadow: var(--shadow-lift);
+  transition:
+    transform 220ms var(--ease-story),
+    box-shadow 220ms;
+}
+
+.tile:focus-visible,
+.tileCurrent {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+.tile:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) {
+  .tile:hover {
+    transform: translateY(-3px) rotate(-0.6deg);
+  }
+}
+
+.tileImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--navy-soft);
+}
+
+@media (min-width: 720px) {
+  .masonry {
+    columns: 3;
+    column-gap: 16px;
+  }
+  .masonryItem {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .masonry {
+    columns: 4;
+  }
+}
+
+@keyframes tileIn {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translate(40px, -28px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-heading);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  color: var(--champagne);
+}
+
+.progressRule {
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.arrow {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--ivory);
+  background: color-mix(in oklab, var(--ivory) 8%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--gold) 55%, transparent) inset;
+  transition:
+    transform 200ms var(--ease-story),
+    opacity 200ms;
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.arrow:not(:disabled):active {
+  transform: scale(0.92);
+}
+
+/* Phones: arrows sit below the photo. Tablet and up: they flank it. */
+.arrowSide {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .arrowSide {
+    display: grid;
+    flex: none;
+    width: 56px;
+    height: 56px;
+  }
+  .arrowInline {
+    display: none;
+  }
+}
+
+/* ---------- Editorial video gallery ---------- */
+
+.collage {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.collageTitle {
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ivory);
+}
+
+/* ---------- Asymmetric masonry layout ---------- */
+
+.posters {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 0;
+  width: 100%;
+  max-width: 1000px;
+
+  columns: 2;
+  column-gap: 18px;
+}
+
+@media (min-width: 900px) {
+  .posters {
+    columns: 3;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .posters {
+    columns: 3;
+    column-gap: 28px;
+  }
+}
+
+.posters li {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+
+  break-inside: avoid;
+  vertical-align: top;
+}
+
+/* ---------- Individual memory cards ---------- */
+
+.poster {
+  appearance: none;
+  border: 1px solid color-mix(in oklab, var(--champagne) 32%, transparent);
+
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  display: block;
+  color: var(--ivory);
+  background: var(--navy-deep);
+
+  border-radius: 15px;
+  box-shadow:
+    0 8px 28px color-mix(in oklab, black 22%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--gold) 8%, transparent);
+
+  transition:
+    transform 350ms var(--ease-story),
+    box-shadow 350ms var(--ease-story),
+    border-color 350ms var(--ease-story);
+}
+
+/* Remove old film perforations */
+
+.sprockets {
+  display: none;
+}
+
+/* ---------- Image ---------- */
+
+.posterMedia {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  aspect-ratio: var(--poster-ratio, 3 / 4);
+
+  overflow: hidden;
+  background: var(--navy-soft);
+}
+
+.posterImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  background: var(--navy-soft);
+
+  transition:
+    transform 700ms var(--ease-story),
+    filter 500ms var(--ease-story);
+}
+
+/* Soft cinematic gradient behind captions */
+
+.poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--navy-deep) 32%, transparent) 0%,
+    transparent 22%,
+    transparent 48%,
+    color-mix(in oklab, var(--navy-deep) 12%, transparent) 65%,
+    color-mix(in oklab, var(--navy-deep) 90%, transparent) 100%
+  );
+
+  opacity: 0.9;
+}
+
+/* ---------- Play button ---------- */
+
+.play {
+  position: absolute;
+  z-index: 2;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--ivory);
+
+  background: color-mix(in oklab, var(--navy-deep) 48%, transparent);
+
+  border: 1px solid color-mix(in oklab, var(--champagne) 72%, transparent);
+
+  backdrop-filter: blur(8px);
+
+  padding-left: 3px;
+
+  transition:
+    background 300ms var(--ease-story),
+    transform 300ms var(--ease-story),
+    box-shadow 300ms var(--ease-story);
+}
+
+/* ---------- Memory title ---------- */
+
+.posterTitle {
+  position: absolute;
+  z-index: 2;
+
+  left: 16px;
+  right: 16px;
+  bottom: 15px;
+
+  font-family: var(--font-hand);
+  font-size: clamp(1.05rem, 3vw, 1.4rem);
+  line-height: 1.15;
+
+  font-weight: 400;
+  text-align: left;
+
+  color: var(--ivory);
+
+  text-shadow: 0 2px 8px color-mix(in oklab, black 55%, transparent);
+}
+
+/* ---------- Hover interactions ---------- */
+
+@media (hover: hover) {
+  .poster:hover {
+    transform: translateY(-5px);
+
+    border-color: color-mix(in oklab, var(--champagne) 65%, transparent);
+
+    box-shadow:
+      0 16px 38px color-mix(in oklab, black 35%, transparent),
+      0 0 20px color-mix(in oklab, var(--gold) 12%, transparent);
+  }
+
+  .poster:hover .posterImg {
+    transform: scale(1.045);
+  }
+
+  .poster:hover .play {
+    background: color-mix(in oklab, var(--gold) 35%, var(--navy-deep));
+
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: var(--glow-gold);
+  }
+}
+
+.poster:active {
+  transform: scale(0.985);
+}
+
+.poster:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 4px;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 420px) {
+  .posters {
+    column-gap: 12px;
+  }
+
+  .posters li {
+    margin-bottom: 14px;
+  }
+
+  .poster {
+    border-radius: 11px;
+  }
+
+  .posterTitle {
+    left: 11px;
+    right: 9px;
+    bottom: 11px;
+    font-size: 1rem;
+  }
+
+  .play {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.textLink {
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  min-height: 44px;
+  color: var(--champagne);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ivory);
+  width: min(94vw, 760px);
+  max-height: 92dvh;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: color-mix(in oklab, var(--navy-deep) 88%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox[open] {
+  animation: develop 400ms var(--ease-story) both;
+  --from-x: 0px;
+}
+
+.lightboxInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.video {
+  width: 100%;
+  max-height: 78dvh;
+  background: var(--navy-deep);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 1px var(--gold) inset;
+}
+
+.videoFailed {
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  background: var(--navy-soft);
+  border-radius: var(--radius-sm);
+}
+
+.videoDesc {
+  font-size: 0.9rem;
+  color: var(--dusty-blue);
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: -56px;
+  right: 0;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--ivory);
+  background: color-mix(in oklab, var(--ivory) 12%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ivory) 30%, transparent) inset;
+}
+
+@keyframes develop {
+  from {
+    opacity: 0;
+    filter: blur(10px) saturate(0.4);
+    transform: translateX(var(--from-x, 0)) rotate(var(--tilt, 0deg)) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: rotate(var(--tilt, 0deg));
+  }
+}

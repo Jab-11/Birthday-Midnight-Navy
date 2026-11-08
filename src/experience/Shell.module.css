@@ -1,0 +1,89 @@
+.shell {
+  --control-fg: var(--ivory);
+  --control-bg: color-mix(in oklab, var(--navy) 45%, transparent);
+  --control-ring: color-mix(in oklab, var(--ivory) 28%, transparent);
+  position: relative;
+  min-height: 100dvh;
+  background: var(--navy);
+}
+
+.shell[data-tone="light"] {
+  --control-fg: var(--navy);
+  --control-bg: color-mix(in oklab, var(--ivory) 70%, transparent);
+  --control-ring: color-mix(in oklab, var(--navy) 22%, transparent);
+}
+
+.bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--safe-top) + 12px) calc(var(--safe-right) + 14px) 0
+    calc(var(--safe-left) + 14px);
+  pointer-events: none;
+}
+
+.bar > * {
+  pointer-events: auto;
+}
+
+.iconButton,
+.pill {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--control-fg);
+  background: var(--control-bg);
+  box-shadow: 0 0 0 1px var(--control-ring) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    transform 200ms var(--ease-story),
+    background 200ms;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.iconButton {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.pill {
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.iconButton:active,
+.pill:active {
+  transform: scale(0.94);
+}
+
+.scene {
+  min-height: 100dvh;
+  animation: sceneIn var(--dur-scene) var(--ease-story) both;
+}
+
+@keyframes sceneIn {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}

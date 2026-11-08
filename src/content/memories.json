@@ -1,0 +1,411 @@
+{
+  "_note": "Owner-editable. The same source file can be reused across multiple entries with different captions, aspect ratios, focus positions and display arrangements. Order determines the story sequence. Photo files belong in src/assets/memories and video files in src/assets/videos.",
+
+  "photos": [
+    {
+      "id": "photo-01",
+      "src": "photo-01-movie-date-polaroid.png",
+      "alt": "A Polaroid-style movie date memory",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "photo-14",
+      "src": "photo-14-first-movie-date-collage.jpg",
+      "alt": "A three-part collage of us walking together",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "id": "photo-17",
+      "src": "photo-17-first-photobooth.jpg",
+      "alt": "Our first photobooth photo strip",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "id": "photo-13",
+      "src": "photo-13-four-months-together.jpg",
+      "alt": "A close selfie of the two of us",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 4896,
+      "height": 6528
+    },
+    {
+      "id": "photo-02",
+      "src": "photo-02-red-kurti-teapost.jpg",
+      "alt": "Her smiling in a red kurti outdoors",
+      "caption": "That smile, that red kurti, and a moment I keep coming back to.",
+      "dateLabel": "20 March",
+      "focus": "50% 50%",
+      "width": 3072,
+      "height": 4096
+    },
+    {
+      "id": "photo-03",
+      "src": "photo-03-hundred-days-blue-glasses.jpg",
+      "alt": "Her wearing blue glasses and smiling",
+      "caption": "A hundred days in, and still my favourite kind of distraction.",
+      "dateLabel": "100 days",
+      "focus": "50% 50%",
+      "width": 3072,
+      "height": 3072
+    },
+    {
+      "id": "photo-04",
+      "src": "photo-04-palm-sunday-white-top.jpg",
+      "alt": "Her smiling in a white top",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 3072,
+      "height": 3072
+    },
+    {
+      "id": "photo-05",
+      "src": "photo-05-easter-yellow-wallpaper.jpg",
+      "alt": "Her relaxing outdoors in a yellow outfit",
+      "caption": "A little sunshine I could look at all day.",
+      "dateLabel": "Easter",
+      "focus": "50% 50%",
+      "width": 1856,
+      "height": 4096
+    },
+    {
+      "id": "photo-06",
+      "src": "photo-06-easter-matching-yellow.jpg",
+      "alt": "The two of us together in matching yellow outfits",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 6528,
+      "height": 3672
+    },
+    {
+      "id": "photo-07",
+      "src": "photo-07-alpha-mall-white-kurti.jpg",
+      "alt": "Her in a white kurti",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 3072,
+      "height": 3072
+    },
+    {
+      "id": "photo-08",
+      "src": "photo-08-amul-cafe-selfie.jpg",
+      "alt": "Her taking a selfie with the camera",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 4896,
+      "height": 4896
+    },
+    {
+      "id": "photo-09",
+      "src": "photo-09-planetarium.jpg",
+      "alt": "Her standing inside the planetarium",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 2448,
+      "height": 3264
+    },
+    {
+      "id": "photo-10",
+      "src": "photo-10-sunlit-eyes.jpg",
+      "alt": "Close-up of her eyes in sunlight",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 828,
+      "height": 468
+    },
+    {
+      "id": "photo-18",
+      "src": "photo-18-flowers-from-manu.jpg",
+      "alt": "Her holding a bouquet of flowers",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "id": "photo-20",
+      "src": "photo-20-college-traditional-day.jpg",
+      "alt": "Her wearing a yellow traditional saree",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 3024,
+      "height": 4032
+    },
+    {
+      "id": "photo-16",
+      "src": "photo-16-her-people-collage.jpg",
+      "alt": "A collage of her friends and graduation memories",
+      "caption": "A little reminder of all the people who are proud of the person you've become.",
+      "dateLabel": "Your people",
+      "focus": "50% 50%",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "id": "photo-15",
+      "src": "photo-15-letters-of-appreciation.jpg",
+      "alt": "Letters written by people appreciating her",
+      "caption": "A reminder of how far you've come, and how many people see it.",
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "id": "photo-21",
+      "src": "photo-21-graduation-portrait.jpg",
+      "alt": "Her graduation portrait with her certificates",
+      "caption": "Look at you, Aloo. Every bit of this moment was earned.",
+      "dateLabel": "Graduation",
+      "focus": "50% 50%",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "id": "photo-22",
+      "src": "photo-22-graduation-with-family.jpg",
+      "alt": "Her celebrating graduation with her family",
+      "caption": "All those difficult days, finally reflected in their proud smiles.",
+      "dateLabel": "Graduation",
+      "focus": "50% 50%",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "id": "photo-19",
+      "src": "photo-19-first-waist-hug.jpg",
+      "alt": "The two of us standing together outdoors",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 3024,
+      "height": 4032
+    },
+    {
+      "id": "photo-23",
+      "src": "photo-23-restaurant-twinning.jpg",
+      "alt": "The two of us hugging at a restaurant",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 2268,
+      "height": 4032
+    },
+    {
+      "id": "photo-24",
+      "src": "photo-24-blue-shirt-candid.jpg",
+      "alt": "A candid photograph of her in a blue shirt",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "photo-26",
+      "src": "photo-26-go-karting-helmets.jpg",
+      "alt": "The two of us wearing helmets at the go-karting track",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 4032,
+      "height": 3024
+    },
+    {
+      "id": "photo-27",
+      "src": "photo-27-go-karting-together.jpg",
+      "alt": "The two of us standing together at the go-karting venue",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 3024,
+      "height": 4032
+    },
+    {
+      "id": "photo-11",
+      "src": "photo-11-may-reunion-black-dress.jpg",
+      "alt": "Her smiling in a dark outfit",
+      "caption": "After a month apart, finally a little time together again.",
+      "dateLabel": "22 May",
+      "focus": "50% 50%",
+      "width": 3072,
+      "height": 3072
+    },
+    {
+      "id": "photo-25",
+      "src": "photo-25-first-station-goodbye.jpg",
+      "alt": "The two of us taking a photograph together",
+      "caption": "A goodbye I didn't want to rush.",
+      "dateLabel": "Our first station goodbye",
+      "focus": "50% 50%",
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "id": "photo-28",
+      "src": "photo-28-video-call-screenshot.jpg",
+      "alt": "A screenshot from one of our video calls",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "id": "photo-29",
+      "src": "photo-29-video-call-screenshot.jpg",
+      "alt": "Another screenshot from one of our video calls",
+      "caption": null,
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "id": "photo-12",
+      "src": "photo-12-childhood-us-ai.jpg",
+      "alt": "An imagined childhood photograph of the two of us",
+      "caption": "A little glimpse of a childhood we never got to share.",
+      "dateLabel": null,
+      "focus": "50% 50%",
+      "width": 1290,
+      "height": 2293
+    }
+  ],
+
+  "videos": [
+    {
+      "id": "video-01",
+      "src": "the-way-the-light-found-you.mp4",
+      "poster": null,
+      "title": "The Way the Light Found You",
+      "description": "Somehow, even the sunlight seemed to find you."
+    },
+    {
+      "id": "video-02",
+      "src": "our-little-reflection.mp4",
+      "poster": null,
+      "title": "Our Little Reflection",
+      "description": "Our first little video, made by you."
+    },
+    {
+      "id": "video-03",
+      "src": "the-story-that-made-us-public.mp4",
+      "poster": null,
+      "title": "The Story That Made Us Public",
+      "description": "A little piece of us, shared for the first time."
+    },
+    {
+      "id": "video-04",
+      "src": "man-mast-magan.mp4",
+      "poster": null,
+      "title": "Man Mast Magan",
+      "description": ""
+    },
+    {
+      "id": "video-05",
+      "src": "a-game-of-memories.mp4",
+      "poster": null,
+      "title": "A Game of Memories",
+      "description": ""
+    },
+    {
+      "id": "video-06",
+      "src": "when-you-werent-looking.mp4",
+      "poster": null,
+      "title": "When You Weren't Looking",
+      "description": "My favourite kind of moment — when you didn't know I was looking."
+    },
+    {
+      "id": "video-07",
+      "src": "dekha-hazaro-dafa.mp4",
+      "poster": null,
+      "title": "Dekha Hazaro Dafa",
+      "description": ""
+    },
+    {
+      "id": "video-08",
+      "src": "a-dream-in-her-hands.mp4",
+      "poster": null,
+      "title": "A Dream in Her Hands",
+      "description": "A day you worked so hard for. So proud of you."
+    },
+    {
+      "id": "video-09",
+      "src": "tere-naina.mp4",
+      "poster": null,
+      "title": "Tere Naina",
+      "description": "I could never get tired of those eyes."
+    },
+    {
+      "id": "video-10",
+      "src": "a-little-walk-towards-me.mp4",
+      "poster": null,
+      "title": "A Little Walk Towards Me",
+      "description": ""
+    },
+    {
+      "id": "video-11",
+      "src": "the-artist-at-home.mp4",
+      "poster": null,
+      "title": "The Artist at Home",
+      "description": "You, making a little corner of home your own."
+    },
+    {
+      "id": "video-12",
+      "src": "four-months-later.mp4",
+      "poster": null,
+      "title": "Four Months Later",
+      "description": "Four months later, and there you were."
+    },
+    {
+      "id": "video-13",
+      "src": "look-whos-here.mp4",
+      "poster": null,
+      "title": "Look Who's Here",
+      "description": ""
+    },
+    {
+      "id": "video-14",
+      "src": "until-we-meet-again.mp4",
+      "poster": null,
+      "title": "Until We Meet Again",
+      "description": "Until the next hello."
+    },
+    {
+      "id": "video-15",
+      "src": "second-photobooth.mp4",
+      "poster": null,
+      "title": "Our Second Little Photo Strip",
+      "description": "Another little strip of memories, another moment to keep."
+    },
+    {
+      "id": "video-16",
+      "src": "ude-zab-zab-jhulphe-teri.mp4",
+      "poster": null,
+      "title": "Ude Zab Zab Jhulfe Teri",
+      "description": "A little moment that deserves to be replayed."
+    }
+  ]
+}

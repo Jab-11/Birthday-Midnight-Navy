@@ -1,0 +1,618 @@
+{
+  "generatedAt": "2026-11-07T13:04:21.217Z",
+  "directory": "src/assets/memories",
+  "totalImages": 29,
+  "expectedImages": 29,
+  "missingCount": 0,
+  "images": [
+    {
+      "id": "photo-01",
+      "filename": "photo-01-movie-date-polaroid.png",
+      "src": "photo-01-movie-date-polaroid.png",
+      "extension": ".png",
+      "width": 1024,
+      "height": 1536,
+      "ratio": 0.667,
+      "orientation": "portrait",
+      "fileSizeKB": 3178.9,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "metadata": {
+        "format": "png",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-02",
+      "filename": "photo-02-red-kurti-teapost.jpg",
+      "src": "photo-02-red-kurti-teapost.jpg",
+      "extension": ".jpg",
+      "width": 3072,
+      "height": 4096,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 3199.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3072,
+        "height": 4096
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-03",
+      "filename": "photo-03-hundred-days-blue-glasses.jpg",
+      "src": "photo-03-hundred-days-blue-glasses.jpg",
+      "extension": ".jpg",
+      "width": 3072,
+      "height": 3072,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 2781.8,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3072,
+        "height": 3072
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-04",
+      "filename": "photo-04-palm-sunday-white-top.jpg",
+      "src": "photo-04-palm-sunday-white-top.jpg",
+      "extension": ".jpg",
+      "width": 3072,
+      "height": 3072,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 1752.5,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3072,
+        "height": 3072
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-05",
+      "filename": "photo-05-easter-yellow-wallpaper.jpg",
+      "src": "photo-05-easter-yellow-wallpaper.jpg",
+      "extension": ".jpg",
+      "width": 4096,
+      "height": 1856,
+      "ratio": 2.207,
+      "orientation": "landscape",
+      "fileSizeKB": 2130.4,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 4096,
+        "height": 1856
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-06",
+      "filename": "photo-06-easter-matching-yellow.jpg",
+      "src": "photo-06-easter-matching-yellow.jpg",
+      "extension": ".jpg",
+      "width": 6528,
+      "height": 3672,
+      "ratio": 1.778,
+      "orientation": "landscape",
+      "fileSizeKB": 7992.4,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 6528,
+        "height": 3672
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-07",
+      "filename": "photo-07-alpha-mall-white-kurti.jpg",
+      "src": "photo-07-alpha-mall-white-kurti.jpg",
+      "extension": ".jpg",
+      "width": 3072,
+      "height": 3072,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 2957.1,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3072,
+        "height": 3072
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-08",
+      "filename": "photo-08-amul-cafe-selfie.jpg",
+      "src": "photo-08-amul-cafe-selfie.jpg",
+      "extension": ".jpg",
+      "width": 4896,
+      "height": 4896,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 4180.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 4896,
+        "height": 4896
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-09",
+      "filename": "photo-09-planetarium.jpg",
+      "src": "photo-09-planetarium.jpg",
+      "extension": ".jpg",
+      "width": 3264,
+      "height": 2448,
+      "ratio": 1.333,
+      "orientation": "landscape",
+      "fileSizeKB": 5851.3,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3264,
+        "height": 2448
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-10",
+      "filename": "photo-10-sunlit-eyes.jpg",
+      "src": "photo-10-sunlit-eyes.jpg",
+      "extension": ".jpg",
+      "width": 828,
+      "height": 468,
+      "ratio": 1.769,
+      "orientation": "landscape",
+      "fileSizeKB": 272.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 828,
+        "height": 468
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-11",
+      "filename": "photo-11-may-reunion-black-dress.jpg",
+      "src": "photo-11-may-reunion-black-dress.jpg",
+      "extension": ".jpg",
+      "width": 3072,
+      "height": 3072,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 1558.5,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3072,
+        "height": 3072
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-12",
+      "filename": "photo-12-childhood-us-ai.jpg",
+      "src": "photo-12-childhood-us-ai.jpg",
+      "extension": ".jpg",
+      "width": 1290,
+      "height": 2293,
+      "ratio": 0.563,
+      "orientation": "portrait",
+      "fileSizeKB": 137.9,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1290,
+        "height": 2293
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-13",
+      "filename": "photo-13-four-months-together.jpg",
+      "src": "photo-13-four-months-together.jpg",
+      "extension": ".jpg",
+      "width": 4896,
+      "height": 6528,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 6183.4,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 4896,
+        "height": 6528
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-14",
+      "filename": "photo-14-first-movie-date-collage.jpg",
+      "src": "photo-14-first-movie-date-collage.jpg",
+      "extension": ".jpg",
+      "width": 1500,
+      "height": 2000,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 1183.2,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1500,
+        "height": 2000
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-15",
+      "filename": "photo-15-letters-of-appreciation.jpg",
+      "src": "photo-15-letters-of-appreciation.jpg",
+      "extension": ".jpg",
+      "width": 1500,
+      "height": 2000,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 1526.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1500,
+        "height": 2000
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-16",
+      "filename": "photo-16-her-people-collage.jpg",
+      "src": "photo-16-her-people-collage.jpg",
+      "extension": ".jpg",
+      "width": 1500,
+      "height": 2000,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 1633.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1500,
+        "height": 2000
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-17",
+      "filename": "photo-17-first-photobooth.jpg",
+      "src": "photo-17-first-photobooth.jpg",
+      "extension": ".jpg",
+      "width": 900,
+      "height": 1600,
+      "ratio": 0.563,
+      "orientation": "portrait",
+      "fileSizeKB": 227.3,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 900,
+        "height": 1600
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-18",
+      "filename": "photo-18-flowers-from-manu.jpg",
+      "src": "photo-18-flowers-from-manu.jpg",
+      "extension": ".jpg",
+      "width": 900,
+      "height": 1600,
+      "ratio": 0.563,
+      "orientation": "portrait",
+      "fileSizeKB": 160,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 900,
+        "height": 1600
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-19",
+      "filename": "photo-19-first-waist-hug.jpg",
+      "src": "photo-19-first-waist-hug.jpg",
+      "extension": ".jpg",
+      "width": 3024,
+      "height": 4032,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 1469.6,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-20",
+      "filename": "photo-20-college-traditional-day.jpg",
+      "src": "photo-20-college-traditional-day.jpg",
+      "extension": ".jpg",
+      "width": 3024,
+      "height": 4032,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 1581.5,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-21",
+      "filename": "photo-21-graduation-portrait.jpg",
+      "src": "photo-21-graduation-portrait.jpg",
+      "extension": ".jpg",
+      "width": 1200,
+      "height": 1600,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 328.8,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1200,
+        "height": 1600
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-22",
+      "filename": "photo-22-graduation-with-family.jpg",
+      "src": "photo-22-graduation-with-family.jpg",
+      "extension": ".jpg",
+      "width": 1200,
+      "height": 1600,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 228.3,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1200,
+        "height": 1600
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-23",
+      "filename": "photo-23-restaurant-twinning.jpg",
+      "src": "photo-23-restaurant-twinning.jpg",
+      "extension": ".jpg",
+      "width": 2268,
+      "height": 4032,
+      "ratio": 0.563,
+      "orientation": "portrait",
+      "fileSizeKB": 832.9,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 2268,
+        "height": 4032
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-24",
+      "filename": "photo-24-blue-shirt-candid.jpg",
+      "src": "photo-24-blue-shirt-candid.jpg",
+      "extension": ".jpg",
+      "width": 1536,
+      "height": 1536,
+      "ratio": 1,
+      "orientation": "square",
+      "fileSizeKB": 133.3,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1536,
+        "height": 1536
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-25",
+      "filename": "photo-25-first-station-goodbye.jpg",
+      "src": "photo-25-first-station-goodbye.jpg",
+      "extension": ".jpg",
+      "width": 900,
+      "height": 1600,
+      "ratio": 0.563,
+      "orientation": "portrait",
+      "fileSizeKB": 126.7,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 900,
+        "height": 1600
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-26",
+      "filename": "photo-26-go-karting-helmets.jpg",
+      "src": "photo-26-go-karting-helmets.jpg",
+      "extension": ".jpg",
+      "width": 4032,
+      "height": 3024,
+      "ratio": 1.333,
+      "orientation": "landscape",
+      "fileSizeKB": 1426,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 4032,
+        "height": 3024
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-27",
+      "filename": "photo-27-go-karting-together.jpg",
+      "src": "photo-27-go-karting-together.jpg",
+      "extension": ".jpg",
+      "width": 3024,
+      "height": 4032,
+      "ratio": 0.75,
+      "orientation": "portrait",
+      "fileSizeKB": 996.3,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-28",
+      "filename": "photo-28-video-call-screenshot.jpg",
+      "src": "photo-28-video-call-screenshot.jpg",
+      "extension": ".jpg",
+      "width": 1080,
+      "height": 2400,
+      "ratio": 0.45,
+      "orientation": "portrait",
+      "fileSizeKB": 940.1,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    },
+    {
+      "id": "photo-29",
+      "filename": "photo-29-video-call-screenshot.jpg",
+      "src": "photo-29-video-call-screenshot.jpg",
+      "extension": ".jpg",
+      "width": 1080,
+      "height": 2400,
+      "ratio": 0.45,
+      "orientation": "portrait",
+      "fileSizeKB": 836.4,
+      "suggestedFocus": "50% 50%",
+      "suggestedDimensions": {
+        "width": 1080,
+        "height": 2400
+      },
+      "metadata": {
+        "format": "jpeg",
+        "hasAlpha": false,
+        "channels": 3
+      }
+    }
+  ]
+}

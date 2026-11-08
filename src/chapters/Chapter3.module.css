@@ -1,0 +1,128 @@
+.room {
+  background: var(--gradient-paper);
+  color: var(--ink);
+}
+
+.room::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bunting {
+  position: absolute;
+  top: calc(var(--safe-top) + 64px);
+  left: -2%;
+  width: 104%;
+  height: 64px;
+  z-index: 1;
+}
+
+.content {
+  margin-top: 52px;
+  gap: 1rem;
+}
+
+.cakeButton {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  width: min(100%, 440px);
+  border-radius: var(--radius-lg);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 300ms var(--ease-story);
+}
+
+.cakeButton:disabled {
+  cursor: default;
+}
+
+.cakeButton:not(:disabled):active {
+  transform: scale(0.985);
+}
+
+.cake {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 22px 26px color-mix(in oklab, var(--cocoa-dark) 30%, transparent));
+}
+
+.flame {
+  animation: flicker 1.6s ease-in-out infinite alternate;
+  transition:
+    opacity 500ms ease,
+    transform 500ms var(--ease-story);
+}
+
+.halo {
+  transition: opacity 900ms ease;
+  animation: breathe 3s ease-in-out infinite alternate;
+}
+
+.smoke {
+  opacity: 0;
+}
+
+.blown .flame {
+  animation: none;
+  opacity: 0;
+  transform: scale(0.2, 0.05);
+}
+
+.blown .halo {
+  animation: none;
+  opacity: 0;
+}
+
+.blown .smoke {
+  animation: smoke 2.4s ease-out both;
+}
+
+.status {
+  min-height: 2.4em;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1, 1) rotate(-2deg);
+  }
+  50% {
+    transform: scale(0.94, 1.06) rotate(1.5deg);
+  }
+  100% {
+    transform: scale(1.03, 0.96) rotate(-1deg);
+  }
+}
+
+@keyframes breathe {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-26px);
+  }
+}

@@ -1,0 +1,63 @@
+name: CI
+
+# Installs, checks, tests and builds the project on every push and pull request.
+# The app is a server-rendered TanStack Start app built for Cloudflare, so it cannot be
+# served from GitHub Pages. This workflow proves it builds; it does not deploy it.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # TanStack Start needs Node 22.12 or newer.
+          node-version: 22
+          cache: npm
+
+      # Uses package-lock.json exactly, so it is fast and repeatable. The repo's .npmrc sets
+      # legacy-peer-deps=true, which avoids an npm peer-resolver crash.
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          # Vite bakes VITE_* values in at build time. Add these under
+          # Settings > Secrets and variables > Actions. The build still passes if they are empty.
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+
+      - name: Upload the build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .output
+          retention-days: 7

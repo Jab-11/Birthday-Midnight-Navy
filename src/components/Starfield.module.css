@@ -1,0 +1,62 @@
+.field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--ivory);
+  opacity: 0.75;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.gold {
+  background: var(--gold-bright);
+}
+
+.bright {
+  box-shadow: 0 0 6px 1px color-mix(in oklab, var(--ivory) 60%, transparent);
+}
+
+.bright::before,
+.bright::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--ivory) 80%, transparent),
+    transparent
+  );
+  transform: translate(-50%, -50%);
+}
+
+.bright::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none;
+    opacity: 0.7;
+  }
+}

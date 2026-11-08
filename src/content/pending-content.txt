@@ -1,0 +1,30 @@
+Pending content and assets
+Updated from src/content/copy.json and src/content/memories.json.
+Chapter copy in copy.json is in place. Items below still need real files or personal details.
+
+Photos
+- All four entries in memories.json use the same file:
+  src/assets/memories/ChatGPT Image Feb 26, 2026, 08_38_15 PM.png
+- Add a distinct photo for photo-01, photo-02, photo-03, and photo-04.
+- Put each file in src/assets/memories and set that entry's "src" to the file name.
+- Alt text and captions are still generic stand-ins. Replace them per photo.
+- dateLabel is null on every photo. Add a date where one belongs.
+- focus is "50% 50%" on every photo. Set a crop point when the real photo needs it.
+
+Videos
+- video-01 through video-04 all use src/assets/videos/placeholder.mp4.
+- All four posters are placeholder-poster-01.jpg.
+- Add a real clip and poster for each video under src/assets/videos.
+- Point each entry's "src" and "poster" at those file names.
+- Titles and descriptions are still generic. Replace them per clip.
+- placeholder-video-01.mp4, placeholder-video-02.mp4, and placeholder-poster-02.jpg are unused leftovers.
+
+Finale
+- Chapter 8 copy is written. No finale image is in src/assets/finale.
+- Add the GIF (or the final still) there. The first image in that folder is the one shown.
+- gifAlt in copy.json is already written. Change it if the real GIF shows something else.
+
+Also still open
+- Music is still src/assets/audio/placeholder.mp3. Replace it with the real track and keep the import in src/content/media.ts pointed at that file.
+- Playback levels in src/content/media.ts (base volume, letter fade, duck, fade length) are working guesses. Set them once the real track is in.
+- Wish email is sent from the browser with EmailJS. It will not send until VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY are set (see .env.example), and the EmailJS template has {{wish}} in its body and the recipient set.
